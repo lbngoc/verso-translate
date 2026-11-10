@@ -33,9 +33,11 @@ from the release page.
 ## macOS
 
 1. Open the `.dmg` and drag **Verso** into `Applications`.
-2. The first launch is blocked by Gatekeeper because the build is unsigned. Either right-click (or
+2. The first launch is blocked by Gatekeeper because the build is not notarized. Either right-click (or
    Control-click) `Verso` in `Applications` and choose **Open**, then **Open** again in the dialog, or open
-   **System Settings › Privacy & Security** and click **Open Anyway** next to the message about Verso.
+   **System Settings › Privacy & Security**, click **Open Anyway** next to the message about Verso, confirm
+   with an administrator's password, then **Open Anyway** again in the confirmation. The alert reads
+   "Apple could not verify 'Verso' is free of malware"; this is expected for an unsigned build.
 3. Verso asks for the **Accessibility** permission the first time it needs to read a selection. Grant it in
    **System Settings › Privacy & Security › Accessibility** (switch Verso on; the first time, confirm with
    your password). Without it, translating a selection cannot read the text; the quick panel still works.

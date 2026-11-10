@@ -8,7 +8,7 @@ declared by each upstream project at the time of porting (2026-11).
 - Upstream: <https://github.com/soimort/translate-shell>
 - Ported logic: `include/Translators/GoogleTranslate.awk` (gtx request shape, response parsing),
   `include/Translators/BingTranslator.awk` (session bootstrap, `ttranslatev3` request),
-  `include/LanguageData.awk` (locale table, converted to `src-tauri/resources/languages.json`).
+  `include/LanguageData.awk` (locale table, converted to the app's bundled language list).
 - The ports are Rust re-implementations; no AWK code is executed at runtime.
 - License: Unlicense (public domain). <https://unlicense.org/>
 
