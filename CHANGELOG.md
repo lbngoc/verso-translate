@@ -18,6 +18,10 @@ First public release for macOS and Windows. The builds are not code-signed yet.
 - Menu bar / notification-area icon with a busy state, an About surface and a two-step onboarding.
 - English and Vietnamese interface, light and dark themes.
 - Installers: macOS dmg for Apple Silicon and Intel, Windows x64 NSIS setup.
+- Self-update: a daily check you can turn off, **Check now**, and a signed download that is verified
+  before it replaces the installed version.
+- **Report a problem…** from the tray or About, with the version, OS, engine order and log tail prefilled
+  into the public issue form; **Copy diagnostics** for the full redacted log.
 
 ### Notes
 

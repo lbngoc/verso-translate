@@ -1,5 +1,8 @@
 # Verso Translate
 
+> **Preview** — `0.1.0` is the first public preview for macOS and Windows. It updates itself; Linux, signed
+> builds and the package-manager channels (Homebrew, winget) arrive in ordinary updates afterwards.
+
 Verso is a small translator that lives in the menu bar (macOS) or the notification area (Windows). Select
 text in any app and press `Alt+Shift+T`: Verso translates it and shows the result in a popup that can copy
 or speak it. Text you type yourself goes through the quick panel.
@@ -8,6 +11,8 @@ or speak it. Text you type yourself goes through the quick panel.
   automatic fallback when one fails.
 - **Automatic source language**, dozens of target languages, English or Vietnamese interface.
 - **Light and dark themes**; the tray mark follows the system.
+- **Updates itself** once you agree to the daily check, with a signed, verified download.
+- **Report a problem** from the tray or Settings, with the log tail prefilled into the issue form.
 - **No telemetry** and no account. See [PRIVACY.md](PRIVACY.md).
 
 ## Download
@@ -23,10 +28,17 @@ The latest installers are on this repository's [Releases](../../releases/latest)
 Every release also publishes `SHA256SUMS.txt` with the SHA-256 of each file. Start with
 [INSTALL.md](INSTALL.md), which covers the first-launch warning on unsigned builds.
 
+### Install channels
+
+Downloads come from this repository's Releases. Homebrew (a tap) and winget are set up alongside the preview;
+the exact commands are added to [INSTALL.md](INSTALL.md) as each channel goes live. Windows users who do not
+use winget take the x64 setup and let the app update itself. Whichever channel installed Verso, the app keeps
+itself up to date.
+
 ## Documentation
 
-- [INSTALL.md](INSTALL.md) — install on macOS and Windows, checksums, permissions
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — blocked engines, shortcuts, logs
+- [INSTALL.md](INSTALL.md) — install on macOS and Windows, checksums, permissions, updates
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — blocked engines, shortcuts, logs, updates, reporting
 - [PRIVACY.md](PRIVACY.md) — which engine receives your text
 - [TERMS.md](TERMS.md) — terms for the binaries
 - [CHANGELOG.md](CHANGELOG.md) — what each release contains

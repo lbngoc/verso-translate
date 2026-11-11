@@ -48,3 +48,22 @@ declared by each upstream project at the time of porting (2026-11).
 - Upstream: <https://github.com/nobiyou/screenTranslate>
 - Clean-room reference only: the selection-capture (`TextGrabber`) and pasteboard snapshot
   (`PasteboardSnapshot`) behaviour was studied and re-implemented; no code is copied.
+
+## Application dependencies
+
+Verso links the direct dependencies below; every one is MIT or Apache-2.0, compatible with the MIT source
+licence. Transitive dependencies are pinned in `Cargo.lock` and `package-lock.json`; a scan finds no
+GPL/AGPL code. MPL-2.0 crates (`cssparser`, `selectors`, `dtoa-short`, `option-ext`) are used unmodified as
+dependencies; the MPL covers their own files only.
+
+| Rust crate | Licence |
+|---|---|
+| tauri, tauri-build, tauri-plugin-autostart, tauri-plugin-global-shortcut, tauri-plugin-log, tauri-plugin-opener, tauri-plugin-single-instance, tauri-plugin-updater | Apache-2.0 OR MIT |
+| async-trait, dirs, log, parking_lot, percent-encoding, rand, reqwest, serde, serde_json, sys-locale, thiserror, url, windows | MIT OR Apache-2.0 |
+| tokio, tts, whatlang, winreg | MIT |
+
+| npm package | Licence |
+|---|---|
+| @tauri-apps/api, @tauri-apps/cli | Apache-2.0 OR MIT |
+| @sveltejs/vite-plugin-svelte, @types/node, @eslint/js, eslint, eslint-plugin-svelte, globals, prettier, prettier-plugin-svelte, svelte, svelte-check, typescript-eslint, vite, vitest | MIT |
+| typescript | Apache-2.0 |

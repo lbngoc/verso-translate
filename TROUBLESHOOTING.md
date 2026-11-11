@@ -46,10 +46,29 @@ counts and error kinds, not the translated text.
 
 ## Reporting a problem
 
-Open an issue on this repository with:
+The fastest route is inside the app: **Report a problem…** in the tray menu, or **Settings › About ›
+Report a problem…**. The browser opens the public issue form with the version, the operating system, the
+engine order and the last lines of the log already filled in; review it, add what you did and what you
+expected, and submit. **Copy diagnostics** copies a fuller text to the clipboard if the log tail was cut.
+
+If the form does not open, open an issue on this repository with:
 
 - the Verso version (tray menu › About Verso, or **Settings › About**) and the OS version;
 - what you did, what you expected and what happened;
 - the last lines of the log around the failure (remove anything personal first).
 
 Security problems go through [SECURITY.md](SECURITY.md), not a public issue.
+
+## Updates
+
+- **No update is offered.** The automatic check runs about 30 seconds after setup finishes and then once a
+  day; press **Check now** in **Settings › About** to ask immediately. The check is off if you turned off
+  **Check for updates automatically** during setup.
+- **The update could not be verified.** The download did not match the signature that ships in the app,
+  so nothing was replaced. Try again; if it keeps happening, report it rather than downloading an
+  installer from anywhere else.
+- **The app did not come back after installing.** On macOS, open Verso again from `Applications`. On
+  Windows, the installer closes the app while it replaces it and starts the new version itself.
+- **Accessibility stopped working after an update (macOS).** Builds are ad-hoc signed, so macOS may tie
+  the grant to the previous build: remove Verso in **System Settings › Privacy & Security ›
+  Accessibility** and add the new `Verso.app` again, as in [INSTALL.md](INSTALL.md).

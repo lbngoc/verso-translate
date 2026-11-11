@@ -48,3 +48,33 @@ above can be deleted by hand.
 
 No version of Verso sends telemetry. Older settings files may contain a `telemetry_opt_in` flag; the app
 ignores it and writes it back as `false`.
+
+## Update checks
+
+The first launch offers **Check for updates automatically**, pre-checked, with an explanation of the
+request. Leave it on and Verso asks `github.com` for one file, `latest.json`, about 30 seconds after setup
+finishes and then once a day; turn it off (in the introduction or later in **Settings › About**) and Verso
+makes no update request at all. The request is an ordinary HTTPS download of a public file: it carries no
+text, no selection, no clipboard content, no settings and no identifier. GitHub sees what it sees for any
+public download (an IP address and a user agent), under its own policy:
+<https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement>.
+
+**Check now** in Settings asks even when the automatic checks are off, because you asked for it.
+
+An offered update is downloaded only when you press **Install**. The download is verified against the
+public key built into the app, and only a matching, newer, signed release is applied; a failed check
+leaves the installed version untouched.
+
+## Reporting a problem
+
+**Report a problem…** (tray menu, or Settings › About) opens the public issue form in your browser with the
+version, the operating system, the engine order and the last lines of the log already filled in. The app
+does not send anything itself: you see the form, can edit or clear every field, and choose whether to
+submit it on GitHub.
+
+The log text is shortened so the address stays under 6,000 characters, and your home directory is
+replaced with `~` before it is placed in the address. Translated text, selected text, clipboard contents
+and API keys are never included. **Copy diagnostics** puts a fuller text (the same information plus the
+full redacted log, up to 200 KB) on the clipboard for you to review and paste; check it before you post.
+
+Security problems go through [SECURITY.md](SECURITY.md), never a public issue.

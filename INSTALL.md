@@ -63,11 +63,20 @@ To remove Verso, use **Settings › Apps › Installed apps › Verso › Uninst
 ## First use
 
 The first launch shows a two-step introduction: choose which services may receive your text (Google and
-Microsoft are both on by default; at least one must stay on), then pick the target language. Both can be
-changed later in **Settings** from the tray menu.
+Microsoft are both on by default; at least one must stay on), then grant the Accessibility permission on
+macOS. The same step offers **Check for updates automatically**, pre-checked, with a line about the
+request; leave it on or turn it off. Everything can be changed later in **Settings** from the tray menu.
 
 Shortcuts can be changed in **Settings › Shortcuts**. On macOS, a global shortcut needs no permission
 beyond Accessibility; if another app already owns the combination, Verso says so and asks for another.
+
+## Updates
+
+Verso updates itself. When the daily check (or **Check now** in **Settings › About**) finds a newer stable
+release, the tray shows **Update available** and the About card offers **Install and relaunch**. Pressing
+Install downloads the update, verifies its signature with the key built into the app, and replaces the
+installed version; a download that does not verify is discarded and the current version keeps working.
+Pre-release builds are never offered, and the automatic check can be switched off in **Settings › About**.
 
 ## Where your data lives
 
