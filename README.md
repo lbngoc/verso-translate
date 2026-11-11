@@ -1,7 +1,9 @@
 # Verso Translate
 
+**Tiếng Việt:** [README_vi.md](README_vi.md)
+
 > **Preview** — `0.1.0` is the first public preview for macOS and Windows. It updates itself; Linux, signed
-> builds and the package-manager channels (Homebrew, winget) arrive in ordinary updates afterwards.
+> builds and winget arrive in ordinary updates afterwards. Homebrew is available now.
 
 Verso is a small translator that lives in the menu bar (macOS) or the notification area (Windows). Select
 text in any app and press `Alt+Shift+T`: Verso translates it and shows the result in a popup that can copy
@@ -15,7 +17,19 @@ or speak it. Text you type yourself goes through the quick panel.
 - **Report a problem** from the tray or Settings, with the log tail prefilled into the issue form.
 - **No telemetry** and no account. See [PRIVACY.md](PRIVACY.md).
 
-## Download
+## Install
+
+### Homebrew (macOS)
+
+```sh
+brew tap lbngoc/verso
+brew install --cask verso
+```
+
+The cask clears the download quarantine flag after installing, so the preview opens without the Gatekeeper
+prompt. `brew` does not need to upgrade it (the cask is marked `auto_updates`): Verso updates itself.
+
+### Direct download
 
 The latest installers are on this repository's [Releases](../../releases/latest) page:
 
@@ -25,15 +39,19 @@ The latest installers are on this repository's [Releases](../../releases/latest)
 | macOS 13 or later, Intel | `Verso_<version>_x64.dmg` |
 | Windows 10 or 11, 64-bit | `Verso_<version>_x64-setup.exe` |
 
-Every release also publishes `SHA256SUMS.txt` with the SHA-256 of each file. Start with
-[INSTALL.md](INSTALL.md), which covers the first-launch warning on unsigned builds.
+Every release also publishes `SHA256SUMS.txt` with the SHA-256 of each file.
 
-### Install channels
+**First launch on macOS.** The preview is ad-hoc signed but not notarized, so macOS blocks it once with
+"Apple could not verify 'Verso' is free of malware". Dismiss it with **Done**, then open **System Settings ›
+Privacy & Security** and scroll to **Security**: click **Open Anyway** next to Verso and enter your login
+password. The button is offered for about an hour after the blocked attempt. On macOS 13 and 14 you can also
+right-click `Verso` in `Applications` and choose **Open**. If the button does not appear, the Terminal
+fallback and the checksum commands are in [INSTALL.md](INSTALL.md).
 
-Downloads come from this repository's Releases. Homebrew (a tap) and winget are set up alongside the preview;
-the exact commands are added to [INSTALL.md](INSTALL.md) as each channel goes live. Windows users who do not
-use winget take the x64 setup and let the app update itself. Whichever channel installed Verso, the app keeps
-itself up to date.
+**Windows.** SmartScreen shows "Windows protected your PC" once: choose **More info**, then **Run anyway**.
+Winget is submitted after the preview; until then take the x64 setup and let the app update itself.
+
+Whichever channel installed Verso, it keeps itself up to date.
 
 ## Documentation
 

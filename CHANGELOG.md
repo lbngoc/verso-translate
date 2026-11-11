@@ -3,6 +3,15 @@
 All notable changes to Verso are listed here. The release pipeline publishes the section that matches
 the release tag, so a tag needs its section before it is pushed.
 
+## 0.1.1 — 2026-11-11
+
+Update-path verification release. No feature changes.
+
+### Notes
+
+- Confirms that 0.1.0 finds, verifies and installs a newer signed build, and that a tampered manifest is
+  refused without touching the installed version.
+
 ## 0.1.0 — 2026-11-10
 
 First public release for macOS and Windows. The builds are not code-signed yet.

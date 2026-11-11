@@ -16,6 +16,23 @@ API key. Under heavy use they can rate-limit or block a network:
 Change the order in **Settings › Engines** (tray menu › Settings…): move the working service to the top, or
 turn one off. With both on, Verso falls back automatically and tells you which service answered.
 
+## macOS says it could not verify Verso
+
+The builds are ad-hoc signed but not notarized, so Gatekeeper blocks the first launch with "Apple could
+not verify 'Verso' is free of malware". Dismiss it with **Done**, then open **System Settings › Privacy &
+Security** and scroll to **Security**: a line about Verso has an **Open Anyway** button. Click it, enter
+your login password, and open Verso again. The button appears for about an hour after the blocked attempt;
+if it is not there, double-click Verso once more and look again immediately.
+
+If the button does not appear at all, run this in Terminal and open Verso again:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Verso.app
+```
+
+That removes the download quarantine flag; it does not change the app. (macOS 13 and 14 also accept
+right-clicking Verso in Applications and choosing **Open**.)
+
 ## The shortcut does nothing
 
 - Make sure Verso is running: the two-arrow mark is in the menu bar or the notification area.

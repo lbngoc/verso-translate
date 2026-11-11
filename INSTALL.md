@@ -1,7 +1,8 @@
 # Installing Verso
 
-Written for **Verso 0.1.0** (macOS 13 or later; Windows 10 or 11, 64-bit). The builds in this release are
-not code-signed, so both systems ask for one confirmation on the first launch; the steps below cover it.
+Written for **Verso 0.1.0** (macOS 13 or later; Windows 10 or 11, 64-bit). The macOS build is ad-hoc signed
+but not notarized, and the Windows build is unsigned, so both systems ask for one confirmation on the first
+launch; the steps below cover it.
 
 Take the installer from the [latest release](../../releases/latest) page. The file names carry the version:
 
@@ -10,6 +11,16 @@ Take the installer from the [latest release](../../releases/latest) page. The fi
 | macOS, Apple Silicon (M1 and later) | `Verso_0.1.0_aarch64.dmg` |
 | macOS, Intel | `Verso_0.1.0_x64.dmg` |
 | Windows, 64-bit | `Verso_0.1.0_x64-setup.exe` |
+
+## Homebrew (macOS)
+
+```sh
+brew tap lbngoc/verso
+brew install --cask verso
+```
+
+The cask removes the download quarantine flag after installing, so the first-launch warning below does not
+appear. Homebrew does not upgrade the app (the cask is marked `auto_updates`): Verso updates itself.
 
 ## Verify the download (recommended)
 
@@ -32,12 +43,16 @@ from the release page.
 
 ## macOS
 
+If you installed with Homebrew, skip steps 1–2: start Verso from `Applications`; the cask already cleared the
+quarantine flag, and Accessibility is asked for as in step 3.
+
 1. Open the `.dmg` and drag **Verso** into `Applications`.
-2. The first launch is blocked by Gatekeeper because the build is not notarized. Either right-click (or
-   Control-click) `Verso` in `Applications` and choose **Open**, then **Open** again in the dialog, or open
-   **System Settings › Privacy & Security**, click **Open Anyway** next to the message about Verso, confirm
-   with an administrator's password, then **Open Anyway** again in the confirmation. The alert reads
-   "Apple could not verify 'Verso' is free of malware"; this is expected for an unsigned build.
+2. The first launch is blocked by Gatekeeper because the build is not notarized; the alert reads
+   "Apple could not verify 'Verso' is free of malware". Dismiss it with **Done** (not **Move to Trash**),
+   then open **System Settings › Privacy & Security** and scroll to **Security**: a line about Verso has
+   an **Open Anyway** button. Click it, enter your login password, then open Verso again. The button is
+   offered for about an hour after the blocked attempt, so do this right away. On macOS 13 and 14 you can
+   also right-click (Control-click) `Verso` in `Applications` and choose **Open**, then **Open** again.
 3. Verso asks for the **Accessibility** permission the first time it needs to read a selection. Grant it in
    **System Settings › Privacy & Security › Accessibility** (switch Verso on; the first time, confirm with
    your password). Without it, translating a selection cannot read the text; the quick panel still works.
