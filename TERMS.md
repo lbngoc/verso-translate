@@ -1,7 +1,7 @@
 # Terms for the Verso binaries
 
-These terms apply to the compiled Verso application and installers published in this repository. They do
-not apply to the source code, which is not published yet.
+These terms apply to the compiled Verso application and installers published in this repository. The source
+code is licensed separately under the MIT licence (see the source repository).
 
 **Publisher**: Ngoc Luong, trading as Verso Translate ("we", "us").
 **Version covered**: 0.1.0, and later releases until these terms change.
@@ -12,8 +12,12 @@ We grant you a free, non-exclusive, non-transferable licence to install and use 
 control, for personal or commercial use.
 
 All rights not granted here are reserved. In particular you may not sell, rent or sublicense the binaries,
-remove the notices, or present them as your own product. The source code is not licensed for reuse in this
-release.
+remove the notices, or present them as your own product.
+
+## Source code
+
+The source code is available at <https://github.com/lbngoc/verso> under the MIT licence. The MIT licence
+covers the source in that repository; these terms cover the compiled binaries.
 
 ## Third-party components
 

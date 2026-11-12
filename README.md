@@ -70,6 +70,6 @@ release.
 
 ## Project status
 
-This repository holds the published documents and the release downloads. The source code is not open yet,
-so pull requests are disabled; issues are enabled for bug reports and questions. The terms that apply to
-the binaries are in [TERMS.md](TERMS.md).
+The source is open at [github.com/lbngoc/verso](https://github.com/lbngoc/verso) under the MIT licence;
+issues and pull requests are welcome there. This repository holds the published documents and the release
+downloads. The terms that apply to the binaries are in [TERMS.md](TERMS.md).
